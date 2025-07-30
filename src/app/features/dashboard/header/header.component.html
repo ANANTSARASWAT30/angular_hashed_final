@@ -1,0 +1,48 @@
+<header class="dashboard-header">
+  <div class="product-name">SkillSphere</div>
+  <div class="search-bar">
+    <img class="search-icon" src="assets/images/search.jpg" alt="Search" />
+    <input
+      type="text"
+      placeholder="Search Courses"
+      [(ngModel)]="searchText"
+      (input)="onSearchInput($event)"
+      (focus)="onSearchFocus()"
+      (blur)="onSearchBlur()"
+      (keydown)="onSearchKeydown($event)"
+    />
+    <button class="clear-btn" *ngIf="searchText" (click)="clearSearch()" aria-label="Clear search">&times;</button>
+    <div class="autocomplete-dropdown" *ngIf="showAutocomplete">
+      <ng-container *ngIf="filteredCourses.length > 0; else noResults">
+        <div class="autocomplete-item" *ngFor="let suggestion of filteredCourses" (mousedown)="selectSuggestion(suggestion)">
+          {{ suggestion }}
+        </div>
+      </ng-container>
+      <ng-template #noResults>
+        <div class="autocomplete-empty">No results found</div>
+      </ng-template>
+    </div>
+  </div>
+  <div class="header-icons">
+    <img class="notification-icon" src="assets/images/bell.jpg" alt="Notifications" />
+    <div class="user-avatar" (click)="toggleProfileDropdown()" tabindex="0">
+      <img [src]="user?.avatarUrl || user?.avatar" alt="User Avatar" />
+      <div class="profile-dropdown" *ngIf="showProfileDropdown" (mouseleave)="closeProfileDropdown()">
+        <div class="profile-header">
+          <img [src]="user?.avatarUrl || user?.avatar" alt="User Avatar" class="profile-avatar" />
+          <div class="profile-info">
+            <div class="profile-name">{{ user?.name }}</div>
+            <div class="profile-role">{{ user?.role }}</div>
+          </div>
+        </div>
+        <div class="profile-links">
+          <a href="#">My Profile</a>
+          <a href="#">Admin Console</a>
+          <a href="#">My Courses</a>
+          <a href="#">Blog</a>
+          <a href="#">Log Out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

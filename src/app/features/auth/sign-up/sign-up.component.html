@@ -1,0 +1,98 @@
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden !important;
+    position: relative;
+  }
+  .sign-up-container {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .sign-up-illustration {
+    width: 50vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    background: transparent; /* Changed to transparent */
+  }
+  .sign-up-illustration img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .sign-up-form {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    min-height: 100vh;
+    background: #fff;
+    z-index: 2;
+  }
+</style>
+<div class="sign-up-container">
+  <div class="sign-up-illustration">
+    <img src="assets/images/signin.png" alt="Sign Up Illustration" />
+  </div>
+  <div class="sign-up-form">
+    <h1 class="product-name">Product Name</h1>
+    <h2 class="welcome">Create Account</h2>
+    <p class="subtitle">Sign up for your Learning account</p>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="form-group">
+        <input type="text" placeholder="User Name" formControlName="username" [class.invalid]="signUpForm.get('username')?.invalid && signUpForm.get('username')?.touched" />
+        <div *ngIf="signUpForm.get('username')?.invalid && signUpForm.get('username')?.touched" class="error">Username is required</div>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Email" formControlName="email" [class.invalid]="signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched" />
+        <div *ngIf="signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched" class="error">Valid email is required</div>
+      </div>
+      <div class="form-group password-group">
+        <input [type]="passwordVisible ? 'text' : 'password'" placeholder="Password" formControlName="password" [class.invalid]="signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched" />
+        <button type="button" class="toggle-password" aria-label="Show/Hide Password" (click)="togglePasswordVisibility()">
+          <span class="eye-icon"></span>
+        </button>
+        <div *ngIf="signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched" class="error">Password is required (min 6 chars)</div>
+      </div>
+      <div class="form-group password-group">
+        <input [type]="confirmPasswordVisible ? 'text' : 'password'" placeholder="Confirm Password" formControlName="confirmPassword" [class.invalid]="(signUpForm.get('confirmPassword')?.invalid && signUpForm.get('confirmPassword')?.touched) || signUpForm.hasError('passwordMismatch')" />
+        <button type="button" class="toggle-password" aria-label="Show/Hide Password" (click)="toggleConfirmPasswordVisibility()">
+          <span class="eye-icon"></span>
+        </button>
+        <div *ngIf="signUpForm.hasError('passwordMismatch') && signUpForm.get('confirmPassword')?.touched" class="error">Passwords do not match</div>
+        <div *ngIf="signUpForm.get('confirmPassword')?.invalid && signUpForm.get('confirmPassword')?.touched && !signUpForm.hasError('passwordMismatch')" class="error">Confirm password is required</div>
+      </div>
+      <div class="form-group">
+        <label><input type="checkbox" formControlName="terms" /> I agree to the terms and conditions by signing up</label>
+        <div *ngIf="signUpForm.get('terms')?.invalid && signUpForm.get('terms')?.touched" class="error">You must agree before registering</div>
+      </div>
+      <button type="submit" class="sign-up-btn" [disabled]="signUpForm.invalid">SIGN UP</button>
+    </form>
+    <div class="login-link">
+      Already have an account? <a href="/auth/sign-in">Sign in</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+.filter-sidebar-container {
+  width: 240px;
+  background: #f6f7fa;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 24px 18px 18px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  /* Remove scroll and max-height */
+}
+.filter-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+.dropdown-arrow {
+  font-size: 1.1em;
+  margin-left: 8px;
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Dropdown animation for filter group content */
+.filter-group-content {
+  overflow: hidden;
+  transition: max-height 0.38s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 500px;
+  opacity: 1;
+}
+.filter-group-content.closed {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.filter-group {
+  margin-bottom: 24px;
+}
+.filter-group h4 {
+  font-size: 1.08rem;
+  margin-bottom: 10px;
+  color: #222;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.filter-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  font-size: 0.97rem;
+  color: #444;
+  padding-left: 2px;
+  justify-content: space-between;
+}
+.filter-option input[type='checkbox'] {
+  margin-right: 8px;
+  accent-color: #3b82f6;
+}
+.count {
+  color: #888;
+  margin-left: 12px;
+  font-size: 0.93em;
+  margin-right: 0;
+  margin-left: auto;
+}
+.stars {
+  color: #f7b500;
+  font-size: 1.08em;
+  margin-right: 4px;
+}
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 18px 0 18px 0;
+}

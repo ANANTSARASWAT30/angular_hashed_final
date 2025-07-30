@@ -1,0 +1,9 @@
+<div class="carousel-section">
+  <h3>{{ title }}</h3>
+  <div class="carousel-wrapper">
+    <div class="carousel" #carousel>
+      <app-course-card *ngFor="let course of courses" [course]="course"></app-course-card>
+    </div>
+    <button class="carousel-btn right" (click)="scrollCarousel('right')"></button>
+  </div>
+</div>

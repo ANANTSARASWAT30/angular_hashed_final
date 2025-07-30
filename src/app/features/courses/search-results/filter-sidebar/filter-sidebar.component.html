@@ -1,0 +1,56 @@
+<div class="filter-sidebar-container">
+  <div class="filter-group">
+    <div class="filter-group-header" (click)="toggleDropdown('duration')">
+      <h4>Duration</h4>
+      <span class="dropdown-arrow" [class.open]="showDuration">&#9660;</span>
+    </div>
+    <div [ngClass]="{'filter-group-content': true, 'closed': !showDuration}">
+      <div class="filter-option"><input type="checkbox" [checked]="filters.duration==='All'" (change)="setFilter('duration','All')"> All <span class="count">(180)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.duration==='<1 week'" (change)="setFilter('duration','<1 week')"> &lt;1 week <span class="count">(20)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.duration==='1-4 weeks'" (change)="setFilter('duration','1-4 weeks')"> 1-4 weeks <span class="count">(30)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.duration==='1-3 Months'" (change)="setFilter('duration','1-3 Months')"> 1-3 Months <span class="count">(50)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.duration==='3-6 Months'" (change)="setFilter('duration','3-6 Months')"> 3-6 Months <span class="count">(60)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.duration==='6-12 Months'" (change)="setFilter('duration','6-12 Months')"> 6-12 Months <span class="count">(20)</span></div>
+    </div>
+  </div>
+  <hr />
+  <div class="filter-group">
+    <div class="filter-group-header" (click)="toggleDropdown('rating')">
+      <h4>Rating</h4>
+      <span class="dropdown-arrow" [class.open]="showRating">&#9660;</span>
+    </div>
+    <div [ngClass]="{'filter-group-content': true, 'closed': !showRating}">
+      <div class="filter-option"><input type="checkbox" [checked]="filters.rating==='All'" (change)="setFilter('rating','All')"> All <span class="count">(180)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.rating==='4.5'" (change)="setFilter('rating','4.5')"> <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.5 & up <span class="count">(120)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.rating==='4.0'" (change)="setFilter('rating','4.0')"> <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.0 & up <span class="count">(30)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.rating==='3.5'" (change)="setFilter('rating','3.5')"> <span class="stars">&#9733;&#9733;&#9733;&#9734;&#9734;</span> 3.5 & up <span class="count">(20)</span></div>
+    </div>
+  </div>
+  <hr />
+  <div class="filter-group">
+    <div class="filter-group-header" (click)="toggleDropdown('published')">
+      <h4>Published Date</h4>
+      <span class="dropdown-arrow" [class.open]="showPublished">&#9660;</span>
+    </div>
+    <div [ngClass]="{'filter-group-content': true, 'closed': !showPublished}">
+      <div class="filter-option"><input type="checkbox" [checked]="filters.published==='All'" (change)="setFilter('published','All')"> All <span class="count">(110)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.published==='This week'" (change)="setFilter('published','This week')"> This week <span class="count">(10)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.published==='This Month'" (change)="setFilter('published','This Month')"> This Month <span class="count">(20)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.published==='Last 6 Months'" (change)="setFilter('published','Last 6 Months')"> Last 6 Months <span class="count">(30)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.published==='This year'" (change)="setFilter('published','This year')"> This year <span class="count">(50)</span></div>
+    </div>
+  </div>
+  <hr />
+  <div class="filter-group">
+    <div class="filter-group-header" (click)="toggleDropdown('level')">
+      <h4>Course Level</h4>
+      <span class="dropdown-arrow" [class.open]="showLevel">&#9660;</span>
+    </div>
+    <div [ngClass]="{'filter-group-content': true, 'closed': !showLevel}">
+      <div class="filter-option"><input type="checkbox" [checked]="filters.level==='All'" (change)="setFilter('level','All')"> All <span class="count">(180)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.level==='Beginner'" (change)="setFilter('level','Beginner')"> Beginner <span class="count">(80)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.level==='Intermediate'" (change)="setFilter('level','Intermediate')"> Intermediate <span class="count">(60)</span></div>
+      <div class="filter-option"><input type="checkbox" [checked]="filters.level==='Advanced'" (change)="setFilter('level','Advanced')"> Advanced <span class="count">(40)</span></div>
+    </div>
+  </div>
+</div>

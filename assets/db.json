@@ -1,0 +1,920 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "hshimron",
+            "email": "harry.shimron@example.com",
+            "password": "hashed_password",
+            "fullName": "Harry Shimron",
+            "track": "DC Software Engineer II",
+            "avatarUrl": "https://i.pravatar.cc/150?u=hshimron",
+            "joinDate": "2021-08-14T00:00:00.000Z",
+            "role": "Admin",
+            "bio": "Passionate writer and avid traveler, Harry shares insights from his adventures around the globe. With a background in journalism, he combines storytelling with a love for photography, capturing the essence of each destination.",
+            "location": "Bangalore, India"
+        },  
+        {
+            "id": 2,
+            "username": "smaarek",
+            "email": "stephane.maarek@example.com",
+            "password": "hashed_password",
+            "fullName": "Stephane Maarek",
+            "track": "AWS Certified Cloud Practitioner",
+            "avatarUrl": "https://i.pravatar.cc/150?u=smaarek",
+            "joinDate": "2020-05-20T00:00:00.000Z",
+            "role": "Author",
+            "bio": "He is a solutions architect, consultant and software developer that has a particular interest in all things related to Cloud and Big Data. He's also a many-times best seller instructor on Udemy for his courses in AWS and Apache Kafka.",
+            "location": "New York, USA"
+        },
+        {
+            "id": 3,
+            "username": "wwarren",
+            "email": "wade.warren@example.com",
+            "password": "hashed_password",
+            "fullName": "Wade Warren",
+            "track": "Learning for U.S",
+            "avatarUrl": "https://i.pravatar.cc/150?u=wwarren",
+            "joinDate": "2022-01-10T00:00:00.000Z",
+            "role": "Learner",
+            "bio": null,
+            "location": "USA"
+        },
+        {
+            "id": 4,
+            "username": "jjones",
+            "email": "jacob.jones@example.com",
+            "password": "hashed_password",
+            "fullName": "Jacob Jones",
+            "track": "Learning for India",
+            "avatarUrl": "https://i.pravatar.cc/150?u=jjones",
+            "joinDate": "2022-03-15T00:00:00.000Z",
+            "role": "Learner",
+            "bio": null,
+            "location": "India"
+        },
+        {
+            "id": 5,
+            "username": "asinghla",
+            "email": "alisha.singhla@example.com",
+            "password": "hashed_password",
+            "fullName": "Alisha Singhla",
+            "track": null,
+            "avatarUrl": "https://i.pravatar.cc/150?u=asinghla",
+            "joinDate": "2022-06-15T00:00:00.000Z",
+            "role": "Author",
+            "bio": null,
+            "location": null
+        },
+        {
+            "id": 6,
+            "username": "ddeb",
+            "email": "dipaman.deb@example.com",
+            "password": "hashed_password",
+            "fullName": "Dipaman Deb",
+            "track": null,
+            "avatarUrl": "https://i.pravatar.cc/150?u=ddeb",
+            "joinDate": "2022-06-15T00:00:00.000Z",
+            "role": "Learner",
+            "bio": null,
+            "location": null
+        }
+    ],
+    "courses": [
+        {
+            "id": 101,
+            "title": "Google Data Analytics Course-1",
+            "subtitle": "Become a Prompt Engineering Expert. Master prompt engineering patterns, techniques, and approaches to effectively leverage Generative AI",
+            "authorId": 2,
+            "provider": {
+                "name": "Google",
+                "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+            },
+            "thumbnailUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858170614",
+            "rating": 4.8,
+            "reviewCount": 1278,
+            "enrollmentCount": 45908,
+            "difficulty": "Beginner",
+            "durationText": "05 Weeks",
+            "skills": [
+                "Prompt Engineering",
+                "MS Excel",
+                "Data Ethics",
+                "Document Management",
+                "Data Analysis"
+            ],
+            "whatYoullLearn": [
+                "Gain an immersive understanding of the questions and processes used by a junior or associate data analyst in their day-to-day job.",
+                "Learn key analytical skills (data cleaning, analysis, & visualization) and tools (spreadsheets, SQL, R programming, Tableau).",
+                "Understand how to clean and organize data for analysis, and complete analysis and calculations using spreadsheets, SQL, and R programming."
+            ],
+            "requirements": [
+                "No experience required. If you can use a web browser, you are good to go!"
+            ],
+            "status": "Published",
+            "publishedDate": "2023-05-20T00:00:00.000Z"
+        },
+        {
+            "id": 102,
+            "title": "Python for Data Science, AI & Development",
+            "subtitle": "Master Python for data science and AI applications.",
+            "authorId": 2,
+            "provider": {
+                "name": "LinkedIn",
+                "logoUrl": "https://ik.imagekit.io/photodata/linkedin.webp?updatedAt=1753858506826"
+            },
+            "thumbnailUrl": "https://ik.imagekit.io/photodata/python.webp?updatedAt=1753858417459",
+            "rating": 4.5,
+            "reviewCount": 133000,
+            "enrollmentCount": 635,
+            "difficulty": "Beginner",
+            "durationText": "6 months",
+            "skills": [
+                "Spreadsheet",
+                "Data Analysis",
+                "SQL",
+                "Data Visualization",
+                "Data C..."
+            ],
+            "whatYoullLearn": [],
+            "requirements": [],
+            "status": "Published",
+            "publishedDate": "2023-09-01T00:00:00.000Z"
+        },
+        {
+            "id": 103,
+            "title": "Big Data Visualization",
+            "subtitle": "Learn to visualize and present complex data sets effectively.",
+            "authorId": 5,
+            "provider": {
+                "name": "LinkedIn",
+                "logoUrl": "https://ik.imagekit.io/photodata/linkedin.webp?updatedAt=1753858506826"
+            },
+            "thumbnailUrl": "https://ik.imagekit.io/photodata/big%20data.webp?updatedAt=1753858260436",
+            "rating": 4.3,
+            "reviewCount": 133000,
+            "enrollmentCount": 635,
+            "difficulty": "Intermediate",
+            "durationText": "6 months",
+            "skills": [
+                "Tableau",
+                "PowerBI",
+                "D3.js",
+                "Data Storytelling"
+            ],
+            "whatYoullLearn": [],
+            "requirements": [],
+            "status": "Published",
+            "publishedDate": "2023-11-15T00:00:00.000Z"
+        },
+        {
+            "id": 104,
+            "title": "Introduction to Cloud Computing",
+            "subtitle": "Get a foundational understanding of cloud concepts.",
+            "authorId": 2,
+            "provider": {
+                "name": "Google",
+                "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+            },
+            "thumbnailUrl": "https://ik.imagekit.io/photodata/cloud.webp?updatedAt=1753858339130",
+            "rating": 4.9,
+            "reviewCount": 98000,
+            "enrollmentCount": 550,
+            "difficulty": "Beginner",
+            "durationText": "4 weeks",
+            "skills": [
+                "Cloud Concepts",
+                "AWS",
+                "Azure",
+                "GCP"
+            ],
+            "whatYoullLearn": [],
+            "requirements": [],
+            "status": "Published",
+            "publishedDate": "2022-10-10T00:00:00.000Z"
+        },
+         {
+    "id": 105,
+    "title": "Advanced SQL for Data Analysis",
+    "subtitle": "Master advanced SQL queries and database optimization techniques.",
+    "authorId": 2,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th6.jpeg?updatedAt=1753860674355",
+    "rating": 4.7,
+    "reviewCount": 12000,
+    "enrollmentCount": 25000,
+    "difficulty": "Intermediate",
+    "durationText": "8 weeks",
+    "skills": ["SQL", "Database Optimization", "Joins", "Window Functions", "Indexing"],
+    "whatYoullLearn": [
+      "Write complex SQL queries for data analysis.",
+      "Optimize database performance using indexing and query planning.",
+      "Use window functions for advanced analytics."
+    ],
+    "requirements": ["Basic SQL knowledge"],
+    "status": "Published",
+    "publishedDate": "2024-01-10T00:00:00.000Z"
+  },
+  {
+    "id": 106,
+    "title": "Machine Learning with Python",
+    "subtitle": "Build and deploy machine learning models using Python.",
+    "authorId": 5,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th8.jpeg?updatedAt=1753860674285",
+    "rating": 4.8,
+    "reviewCount": 18000,
+    "enrollmentCount": 32000,
+    "difficulty": "Advanced",
+    "durationText": "10 weeks",
+    "skills": ["Python", "Machine Learning", "scikit-learn", "Model Deployment", "Data Preprocessing"],
+    "whatYoullLearn": [
+      "Build regression and classification models.",
+      "Deploy models to production.",
+      "Preprocess and clean data for ML."
+    ],
+    "requirements": ["Python basics", "Linear algebra"],
+    "status": "Published",
+    "publishedDate": "2024-02-15T00:00:00.000Z"
+  },
+  {
+    "id": 107,
+    "title": "Deep Learning Specialization",
+    "subtitle": "Comprehensive guide to deep learning and neural networks.",
+    "authorId": 2,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th2.webp?updatedAt=1753860674265",
+    "rating": 4.9,
+    "reviewCount": 25000,
+    "enrollmentCount": 40000,
+    "difficulty": "Advanced",
+    "durationText": "12 weeks",
+    "skills": ["Deep Learning", "Neural Networks", "TensorFlow", "Keras", "Backpropagation"],
+    "whatYoullLearn": [
+      "Design and train deep neural networks.",
+      "Implement models in TensorFlow and Keras.",
+      "Understand backpropagation and optimization."
+    ],
+    "requirements": ["Python", "Machine Learning basics"],
+    "status": "Published",
+    "publishedDate": "2024-03-01T00:00:00.000Z"
+  },
+  {
+    "id": 108,
+    "title": "Data Visualization with Tableau",
+    "subtitle": "Create stunning data visualizations and dashboards in Tableau.",
+    "authorId": 5,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th6.jpeg?updatedAt=1753860674355",
+    "rating": 4.6,
+    "reviewCount": 9000,
+    "enrollmentCount": 15000,
+    "difficulty": "Beginner",
+    "durationText": "6 weeks",
+    "skills": ["Tableau", "Data Visualization", "Dashboards", "Storytelling", "Charts"],
+    "whatYoullLearn": [
+      "Build interactive dashboards in Tableau.",
+      "Visualize data using various chart types.",
+      "Tell compelling stories with data."
+    ],
+    "requirements": ["No prerequisites"],
+    "status": "Published",
+    "publishedDate": "2024-04-10T00:00:00.000Z"
+  },
+  {
+    "id": 109,
+    "title": "Natural Language Processing Fundamentals",
+    "subtitle": "Learn the basics of NLP and text analytics.",
+    "authorId": 2,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th5.jpeg?updatedAt=1753860674163",
+    "rating": 4.5,
+    "reviewCount": 7000,
+    "enrollmentCount": 12000,
+    "difficulty": "Intermediate",
+    "durationText": "7 weeks",
+    "skills": ["NLP", "Text Analytics", "spaCy", "Sentiment Analysis", "Tokenization"],
+    "whatYoullLearn": [
+      "Process and analyze text data.",
+      "Build sentiment analysis models.",
+      "Use spaCy for NLP tasks."
+    ],
+    "requirements": ["Python basics"],
+    "status": "Published",
+    "publishedDate": "2024-05-05T00:00:00.000Z"
+  },
+  {
+    "id": 110,
+    "title": "Business Analytics with Excel",
+    "subtitle": "Leverage Excel for business analytics and decision making.",
+    "authorId": 2,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th10.jpeg?updatedAt=1753860674122",
+    "rating": 4.4,
+    "reviewCount": 8000,
+    "enrollmentCount": 14000,
+    "difficulty": "Beginner",
+    "durationText": "5 weeks",
+    "skills": ["Excel", "Business Analytics", "Pivot Tables", "Data Cleaning", "Charts"],
+    "whatYoullLearn": [
+      "Analyze business data in Excel.",
+      "Create pivot tables and charts.",
+      "Clean and prepare data for analysis."
+    ],
+    "requirements": ["Basic Excel knowledge"],
+    "status": "Published",
+    "publishedDate": "2024-06-01T00:00:00.000Z"
+  },
+  {
+    "id": 111,
+    "title": "Statistics for Data Science",
+    "subtitle": "Essential statistics concepts for data science and analytics.",
+    "authorId": 5,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th11.jpeg?updatedAt=1753860674058",
+    "rating": 4.7,
+    "reviewCount": 11000,
+    "enrollmentCount": 21000,
+    "difficulty": "Beginner",
+    "durationText": "6 weeks",
+    "skills": ["Statistics", "Probability", "Hypothesis Testing", "Distributions", "Sampling"],
+    "whatYoullLearn": [
+      "Understand probability and distributions.",
+      "Perform hypothesis testing.",
+      "Apply statistics in real-world scenarios."
+    ],
+    "requirements": ["High school math"],
+    "status": "Published",
+    "publishedDate": "2024-07-01T00:00:00.000Z"
+  },
+  {
+    "id": 112,
+    "title": "Data Engineering on AWS",
+    "subtitle": "Build scalable data pipelines on AWS cloud.",
+    "authorId": 2,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th3.jpeg?updatedAt=1753860673955",
+    "rating": 4.8,
+    "reviewCount": 9500,
+    "enrollmentCount": 18000,
+    "difficulty": "Advanced",
+    "durationText": "9 weeks",
+    "skills": ["AWS", "Data Engineering", "ETL", "Redshift", "Glue"],
+    "whatYoullLearn": [
+      "Design ETL pipelines on AWS.",
+      "Work with Redshift and Glue.",
+      "Automate data workflows."
+    ],
+    "requirements": ["AWS basics", "Python"],
+    "status": "Published",
+    "publishedDate": "2024-08-01T00:00:00.000Z"
+  },
+  {
+    "id": 113,
+    "title": "Power BI for Beginners",
+    "subtitle": "Get started with Power BI for business intelligence.",
+    "authorId": 5,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/python.webp?updatedAt=1753858417459",
+    "rating": 4.6,
+    "reviewCount": 6000,
+    "enrollmentCount": 13000,
+    "difficulty": "Beginner",
+    "durationText": "5 weeks",
+    "skills": ["Power BI", "Data Visualization", "DAX", "Reports", "Dashboards"],
+    "whatYoullLearn": [
+      "Create reports and dashboards in Power BI.",
+      "Use DAX for calculations.",
+      "Visualize business data."
+    ],
+    "requirements": ["No prerequisites"],
+    "status": "Published",
+    "publishedDate": "2024-09-01T00:00:00.000Z"
+  },
+  {
+    "id": 114,
+    "title": "Big Data Fundamentals",
+    "subtitle": "Introduction to big data concepts and tools.",
+    "authorId": 2,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th1.webp?updatedAt=1753860676947",
+    "rating": 4.5,
+    "reviewCount": 8000,
+    "enrollmentCount": 17000,
+    "difficulty": "Intermediate",
+    "durationText": "7 weeks",
+    "skills": ["Big Data", "Hadoop", "Spark", "Data Lakes", "MapReduce"],
+    "whatYoullLearn": [
+      "Understand big data architecture.",
+      "Work with Hadoop and Spark.",
+      "Build data lakes and pipelines."
+    ],
+    "requirements": ["Basic programming"],
+    "status": "Published",
+    "publishedDate": "2024-10-01T00:00:00.000Z"
+  },
+  {
+    "id": 115,
+    "title": "Excel to MySQL: Analytic Techniques",
+    "subtitle": "Bridge the gap from Excel to SQL for analytics.",
+    "authorId": 5,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th9.jpeg?updatedAt=1753860674391",
+    "rating": 4.7,
+    "reviewCount": 9000,
+    "enrollmentCount": 16000,
+    "difficulty": "Intermediate",
+    "durationText": "6 weeks",
+    "skills": ["Excel", "MySQL", "Analytics", "Data Cleaning", "SQL Joins"],
+    "whatYoullLearn": [
+      "Transition from Excel to SQL for analytics.",
+      "Clean and analyze data in MySQL.",
+      "Perform advanced analytics."
+    ],
+    "requirements": ["Excel basics"],
+    "status": "Published",
+    "publishedDate": "2024-11-01T00:00:00.000Z"
+  },
+  {
+    "id": 116,
+    "title": "Data Science Capstone Project",
+    "subtitle": "Apply your data science skills in a real-world project.",
+    "authorId": 2,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th4.jpeg?updatedAt=1753860674386",
+    "rating": 4.8,
+    "reviewCount": 10000,
+    "enrollmentCount": 22000,
+    "difficulty": "Advanced",
+    "durationText": "8 weeks",
+    "skills": ["Data Science", "Project Management", "Python", "Reporting", "Collaboration"],
+    "whatYoullLearn": [
+      "Plan and execute a data science project.",
+      "Collaborate with team members.",
+      "Present findings in a report."
+    ],
+    "requirements": ["Data science basics"],
+    "status": "Published",
+    "publishedDate": "2024-12-01T00:00:00.000Z"
+  },
+  {
+    "id": 117,
+    "title": "AI for Everyone",
+    "subtitle": "Understand the basics and impact of artificial intelligence.",
+    "authorId": 5,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th6.jpeg?updatedAt=1753860674355",
+    "rating": 4.6,
+    "reviewCount": 8500,
+    "enrollmentCount": 15000,
+    "difficulty": "Beginner",
+    "durationText": "4 weeks",
+    "skills": ["AI", "Ethics", "Applications", "History", "Future Trends"],
+    "whatYoullLearn": [
+      "Understand AI concepts and history.",
+      "Explore ethical implications of AI.",
+      "Discover real-world AI applications."
+    ],
+    "requirements": ["No prerequisites"],
+    "status": "Published",
+    "publishedDate": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 118,
+    "title": "Data Wrangling with Python",
+    "subtitle": "Clean and transform data using Python libraries.",
+    "authorId": 2,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th8.jpeg?updatedAt=1753860674285",
+    "rating": 4.7,
+    "reviewCount": 9500,
+    "enrollmentCount": 17000,
+    "difficulty": "Intermediate",
+    "durationText": "6 weeks",
+    "skills": ["Python", "Pandas", "Data Cleaning", "Transformation", "DataFrames"],
+    "whatYoullLearn": [
+      "Clean and transform data with Pandas.",
+      "Handle missing values and outliers.",
+      "Prepare data for analysis."
+    ],
+    "requirements": ["Python basics"],
+    "status": "Published",
+    "publishedDate": "2025-02-01T00:00:00.000Z"
+  },
+  {
+    "id": 119,
+    "title": "Cloud Data Warehousing",
+    "subtitle": "Design and manage data warehouses in the cloud.",
+    "authorId": 5,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th2.webp?updatedAt=1753860674265",
+    "rating": 4.8,
+    "reviewCount": 11000,
+    "enrollmentCount": 20000,
+    "difficulty": "Advanced",
+    "durationText": "9 weeks",
+    "skills": ["Cloud", "Data Warehousing", "Redshift", "BigQuery", "ETL"],
+    "whatYoullLearn": [
+      "Design cloud data warehouses.",
+      "Work with Redshift and BigQuery.",
+      "Automate ETL processes."
+    ],
+    "requirements": ["Cloud basics", "SQL"],
+    "status": "Published",
+    "publishedDate": "2025-03-01T00:00:00.000Z"
+  },
+  {
+    "id": 120,
+    "title": "Data Ethics and Privacy",
+    "subtitle": "Understand ethical and privacy issues in data science.",
+    "authorId": 2,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th6.jpeg?updatedAt=1753860674355",
+    "rating": 4.5,
+    "reviewCount": 7000,
+    "enrollmentCount": 12000,
+    "difficulty": "Intermediate",
+    "durationText": "5 weeks",
+    "skills": ["Ethics", "Privacy", "Data Governance", "Compliance", "GDPR"],
+    "whatYoullLearn": [
+      "Understand data ethics and privacy laws.",
+      "Implement data governance policies.",
+      "Ensure compliance with GDPR."
+    ],
+    "requirements": ["No prerequisites"],
+    "status": "Published",
+    "publishedDate": "2025-04-01T00:00:00.000Z"
+  },
+  {
+    "id": 121,
+    "title": "Time Series Analysis with Python",
+    "subtitle": "Analyze and forecast time series data using Python.",
+    "authorId": 5,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th5.jpeg?updatedAt=1753860674163",
+    "rating": 4.7,
+    "reviewCount": 9000,
+    "enrollmentCount": 16000,
+    "difficulty": "Advanced",
+    "durationText": "8 weeks",
+    "skills": ["Time Series", "Python", "Forecasting", "ARIMA", "Visualization"],
+    "whatYoullLearn": [
+      "Analyze time series data in Python.",
+      "Build forecasting models (ARIMA, etc.).",
+      "Visualize time series trends."
+    ],
+    "requirements": ["Python", "Statistics"],
+    "status": "Published",
+    "publishedDate": "2025-05-01T00:00:00.000Z"
+  },
+  {
+    "id": 122,
+    "title": "Data Mining and Predictive Analytics",
+    "subtitle": "Discover patterns and make predictions from data.",
+    "authorId": 2,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th10.jpeg?updatedAt=1753860674122",
+    "rating": 4.6,
+    "reviewCount": 9500,
+    "enrollmentCount": 18000,
+    "difficulty": "Intermediate",
+    "durationText": "7 weeks",
+    "skills": ["Data Mining", "Predictive Analytics", "Classification", "Clustering", "Regression"],
+    "whatYoullLearn": [
+      "Apply classification and clustering techniques.",
+      "Build predictive models.",
+      "Interpret data mining results."
+    ],
+    "requirements": ["Basic statistics"],
+    "status": "Published",
+    "publishedDate": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "id": 123,
+    "title": "Big Data Security Essentials",
+    "subtitle": "Secure big data systems and protect sensitive information.",
+    "authorId": 5,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th11.jpeg?updatedAt=1753860674058",
+    "rating": 4.8,
+    "reviewCount": 10000,
+    "enrollmentCount": 20000,
+    "difficulty": "Advanced",
+    "durationText": "8 weeks",
+    "skills": ["Big Data", "Security", "Encryption", "IAM", "Compliance"],
+    "whatYoullLearn": [
+      "Implement security best practices for big data.",
+      "Use encryption and IAM for data protection.",
+      "Ensure compliance in big data environments."
+    ],
+    "requirements": ["Big data basics"],
+    "status": "Published",
+    "publishedDate": "2025-07-01T00:00:00.000Z"
+  },
+  {
+    "id": 124,
+    "title": "Data Science for Business Leaders",
+    "subtitle": "Leverage data science for strategic business decisions.",
+    "authorId": 2,
+    "provider": {
+      "name": "Google",
+      "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536"
+    },
+    "thumbnailUrl": "https://ik.imagekit.io/photodata/th3.jpeg?updatedAt=1753860673955",
+    "rating": 4.7,
+    "reviewCount": 9000,
+    "enrollmentCount": 17000,
+    "difficulty": "Intermediate",
+    "durationText": "6 weeks",
+    "skills": ["Data Science", "Business Strategy", "Analytics", "KPIs", "ROI"],
+    "whatYoullLearn": [
+      "Apply data science to business problems.",
+      "Measure and improve business KPIs.",
+      "Communicate data insights to stakeholders."
+    ],
+    "requirements": ["Business basics"],
+    "status": "Published",
+    "publishedDate": "2025-08-01T00:00:00.000Z"
+  }
+    ],
+    "curriculum": {
+        "101": [
+            {
+                "id": 201,
+                "title": "Section 1: Introduction",
+                "lectures": [
+                    {
+                        "id": 301,
+                        "title": "Course Overview",
+                        "type": "Text",
+                        "durationMinutes": 3,
+                        "content": {
+                            "htmlContent": "<h1>Welcome!</h1><p>In this course you will learn...</p>"
+                        }
+                    },
+                    {
+                        "id": 302,
+                        "title": "Google Analytics Overview",
+                        "type": "Video",
+                        "durationMinutes": 8,
+                        "content": {
+                            "videoUrl": "path/to/video1.mp4"
+                        }
+                    },
+                    {
+                        "id": 303,
+                        "title": "How to Set Up a Google Analytics Demo Account",
+                        "type": "Video",
+                        "durationMinutes": 6,
+                        "content": {
+                            "videoUrl": "path/to/video2.mp4"
+                        }
+                    },
+                    {
+                        "id": 304,
+                        "title": "Google Analytics Dictionary - The Top 50 Terms to Know",
+                        "type": "PDF",
+                        "durationMinutes": 10,
+                        "content": {
+                            "fileUrl": "path/to/dictionary.pdf"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": 202,
+                "title": "Section 2: How To Analysis Reports & Increase Traffic And Sales",
+                "lectures": [
+                    {
+                        "id": 305,
+                        "title": "Analyzing Audience Reports",
+                        "type": "Video",
+                        "durationMinutes": 12,
+                        "content": {
+                            "videoUrl": "path/to/video3.mp4"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "quizzes": {
+        "101": [
+            {
+                "id": 401,
+                "questionText": "In data analytics, noise is ____.",
+                "options": [
+                    {
+                        "text": "fields that are necessary for reporting and visualization",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "fields and data types",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "data that is not meaningful for reporting",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "timing and calculations",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "id": 402,
+                "questionText": "Your customer table has a column titled Customer Type. How does this most likely relate to your company’s business rules?",
+                "options": [
+                    {
+                        "text": "There is a business rule that defines what a Customer Type is.",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "There is a business rule that specifies how the table is set up.",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "This level of detail is usually beyond what a business rule calls for.",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "There is a business ranking Leads by number of orders.",
+                        "isCorrect": false
+                    }
+                ]
+            },
+            {
+                "id": 403,
+                "questionText": "Why are business rules important?",
+                "options": [
+                    {
+                        "text": "All of these answers",
+                        "isCorrect": true
+                    },
+                    {
+                        "text": "They help define the data.",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "They impact the timing of data.",
+                        "isCorrect": false
+                    },
+                    {
+                        "text": "They drive the necessary calculations.",
+                        "isCorrect": false
+                    }
+                ]
+            }
+        ]
+    },
+    "reviews": {
+        "101": [
+            {
+                "userId": 3,
+                "rating": 4.8,
+                "comment": "The Google Data Analytics course was a pivotal moment in my career. I went from having a basic understanding of spreadsheets to confidently performing complex queries in SQL and building amazing dashboards in Tableau."
+            },
+            {
+                "userId": 4,
+                "rating": 4.7,
+                "comment": "This data analytics program was a game-changer. The curriculum is incredibly well-structured, taking you from the basics of data cleaning to advanced machine learning concepts."
+            }
+        ]
+    },
+    "userEnrollments": {
+        "1": [
+            {
+                "courseId": 101,
+                "progressPercent": 21
+            },
+            {
+                "courseId": 103,
+                "progressPercent": 10
+            },
+            {
+                "courseId": 104,
+                "progressPercent": 80
+            },
+            {
+                "courseId": 105,
+                "progressPercent": 40
+            },
+            {
+                "courseId": 106,
+                "progressPercent": 30
+            },
+            {
+                "courseId": 107,
+                "progressPercent": 20
+            },
+            {
+                "courseId": 108,
+                "progressPercent": 60
+            },
+            {
+                "courseId": 109,
+                "progressPercent": 5
+            },
+            {
+                "courseId": 110,
+                "progressPercent": 70
+            }
+        ],
+        "3": [
+            {
+                "courseId": 101,
+                "progressPercent": 100
+            },
+            {
+                "courseId": 102,
+                "progressPercent": 50
+            }
+        ],
+        "4": [
+            {
+                "courseId": 101,
+                "progressPercent": 100
+            }
+        ]
+    },
+    "banners": [
+        {
+            "id": 501,
+            "imageUrl": "https://i.imgur.com/your-banner-1.png",
+            "status": "active",
+            "scheduleDate": null,
+            "expiryDate": null
+        },
+        {
+            "id": 502,
+            "imageUrl": "https://i.imgur.com/your-banner-2.png",
+            "status": "scheduled",
+            "scheduleDate": "2024-12-01T00:00:00.000Z",
+            "expiryDate": "2024-12-25T23:59:59.000Z"
+        },
+        {
+            "id": 503,
+            "imageUrl": "https://i.imgur.com/your-banner-3.png",
+            "status": "inactive",
+            "scheduleDate": null,
+            "expiryDate": null
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+.statistics-cards {
+  display: flex;
+  gap: 24px;
+  margin: 32px 0;
+}
+.stat-card {
+  flex: 1;
+  background: #f5f8f8;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #46605a;
+}
+.stat-label {
+  font-size: 1.1rem;
+  color: #46605a;
+  margin-bottom: 8px;
+}
+.stat-card a {
+  color: #3b7ddd;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}

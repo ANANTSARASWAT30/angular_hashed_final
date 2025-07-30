@@ -1,0 +1,177 @@
+
+<app-header></app-header>
+<div class="course-details-page">
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a routerLink="/dashboard">Home</a>
+    <span class="breadcrumb-sep">&gt;</span>
+    <span>{{ course?.title }}</span>
+  </nav>
+
+  <!-- Course Banner Section -->
+  <div class="course-banner-section">
+    <div class="banner-info-block">
+      <h1 class="course-title">{{ course?.title }}</h1>
+      <p class="course-desc">{{ course?.description || course?.subtitle }}</p>
+      <div class="course-meta-row">
+        <span>Created by:
+          <ng-container *ngIf="author">
+            <a href="#" class="author-link">{{ author.fullName }}</a>
+          </ng-container>
+        </span>
+      </div>
+  <!-- Enroll button and count removed for clean metrics bar -->
+    </div>
+    <div class="banner-art">
+      <!-- Decorative SVG or image if needed -->
+    </div>
+  </div>
+
+  <!-- Enroll Button and Enrollment Count to the far left -->
+  <div style="display: flex; align-items: flex-start; max-width: 1400px; width: 98vw; margin: 0 auto 0 auto; padding: 0 0 8px 0;">
+    <div style="display: flex; flex-direction: column; align-items: flex-start; min-width: 220px;">
+      <button class="enroll-btn" style="background: #3a7c5a; color: #fff; font-weight: 700; border: none; border-radius: 8px; padding: 13px 38px; font-size: 18px; margin-bottom: 8px; box-shadow: 0 2px 8px 0 rgba(58,124,90,0.10); cursor: pointer; letter-spacing: 0.5px;">Enroll Now</button>
+      <span class="enroll-count" style="font-weight: 600; color: #222; font-size: 16px; letter-spacing: 0.2px;">{{ course?.enrollmentCount | number }} already enrolled</span>
+    </div>
+  </div>
+  <!-- Metrics Bar -->
+  <div class="metrics-bar" style="background: #fff; border-radius: 18px; margin: 0 auto 24px auto; box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07); max-width: 1400px; min-width: 340px; width: 98vw; display: flex; flex-direction: row; align-items: stretch; justify-content: space-between; padding: 0 0; height: 70px;">
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 12px 0 12px 36px; border-top-left-radius: 18px; border-bottom-left-radius: 18px;">
+      <div class="metric-label" style="color: #888; font-size: 13px;">Level</div>
+      <div class="metric-value" style="font-weight: 700; font-size: 18px; color: #222; margin-top: 2px;">{{ course?.level || 'Beginner Level' }}</div>
+    </div>
+    <div style="width: 1px; background: #ececec; margin: 10px 0;"></div>
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 12px 0 12px 36px;">
+      <div class="metric-label" style="color: #888; font-size: 13px;">Rating</div>
+      <div class="metric-value" style="font-weight: 700; font-size: 18px; color: #222; margin-top: 2px;">
+        {{ course?.rating }} <span style="color: #fbbf24;">★</span>
+        <span style="color: #888; font-size: 13px; font-weight: 400;">({{ course?.reviewCount | number }} reviews)</span>
+      </div>
+    </div>
+    <div style="width: 1px; background: #ececec; margin: 10px 0;"></div>
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 12px 0 12px 36px;">
+      <div class="metric-label" style="color: #888; font-size: 13px;">Duration</div>
+      <div class="metric-value" style="font-weight: 700; font-size: 18px; color: #222; margin-top: 2px;">{{ course?.duration || '05 Weeks' }}</div>
+    </div>
+    <div style="width: 1px; background: #ececec; margin: 10px 0;"></div>
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 12px 0 12px 36px; border-top-right-radius: 18px; border-bottom-right-radius: 18px;">
+      <div class="metric-label" style="color: #888; font-size: 13px;">Flexible Schedule</div>
+      <div class="metric-value" style="font-weight: 700; font-size: 18px; color: #222; margin-top: 2px;">Learn at your own pace</div>
+    </div>
+  </div>
+
+  <div class="course-details-content">
+    <div class="course-main">
+      <!-- Tab Navigation -->
+      <div class="course-tabs" style="display: flex; border-bottom: 3px solid #e5e5e5; margin-bottom: 18px; background: #fff; border-radius: 12px 12px 0 0; overflow: hidden;">
+        <button class="tab" [ngClass]="{active: selectedTab === 'overview'}" (click)="selectedTab = 'overview'" style="flex: 1; background: none; border: none; outline: none; font-size: 18px; font-weight: 700; color: #222; padding: 18px 0 8px 0; border-bottom: 3px solid #6bb3a3; cursor: pointer; transition: color 0.2s;" [style.color]="selectedTab === 'overview' ? '#222' : '#888'" [style.borderBottomColor]="selectedTab === 'overview' ? '#6bb3a3' : 'transparent'">Overview</button>
+        <button class="tab" [ngClass]="{active: selectedTab === 'content'}" (click)="selectedTab = 'content'" style="flex: 1; background: none; border: none; outline: none; font-size: 18px; font-weight: 700; color: #222; padding: 18px 0 8px 0; border-bottom: 3px solid #6bb3a3; cursor: pointer; transition: color 0.2s;" [style.color]="selectedTab === 'content' ? '#222' : '#888'" [style.borderBottomColor]="selectedTab === 'content' ? '#6bb3a3' : 'transparent'">Course Content</button>
+        <button class="tab" [ngClass]="{active: selectedTab === 'author'}" (click)="selectedTab = 'author'" style="flex: 1; background: none; border: none; outline: none; font-size: 18px; font-weight: 700; color: #222; padding: 18px 0 8px 0; border-bottom: 3px solid #6bb3a3; cursor: pointer; transition: color 0.2s;" [style.color]="selectedTab === 'author' ? '#222' : '#888'" [style.borderBottomColor]="selectedTab === 'author' ? '#6bb3a3' : 'transparent'">Author Details</button>
+        <button class="tab" [ngClass]="{active: selectedTab === 'testimonials'}" (click)="selectedTab = 'testimonials'" style="flex: 1; background: none; border: none; outline: none; font-size: 18px; font-weight: 700; color: #222; padding: 18px 0 8px 0; border-bottom: 3px solid #6bb3a3; cursor: pointer; transition: color 0.2s;" [style.color]="selectedTab === 'testimonials' ? '#222' : '#888'" [style.borderBottomColor]="selectedTab === 'testimonials' ? '#6bb3a3' : 'transparent'">Testimonials</button>
+      </div>
+
+      <!-- Tab Sections -->
+      <div id="tab-overview" *ngIf="selectedTab === 'overview'">
+        <h2>What you'll Learn</h2>
+        <ul>
+          <li *ngFor="let item of course?.learningOutcomes">{{ item }}</li>
+        </ul>
+        <div class="skills-section" style="max-width: 420px; margin: 0 0 12px 0;">
+          <div class="skills-title" style="font-size: 13px; font-weight: 600; color: #222; margin-bottom: 6px;">Skills you'll gain</div>
+          <div class="skills-list" style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="skill-chip" *ngFor="let skill of course?.skills" style="background: #e6f4f1; color: #222; font-size: 11px; font-weight: 600; border-radius: 5px; padding: 4px 10px;">{{ skill }}</span>
+          </div>
+        </div>
+        <div class="requirements-section">
+          <div class="requirements-title">Requirements</div>
+          <ul>
+            <li *ngFor="let req of course?.requirements">{{ req }}</li>
+          </ul>
+        </div>
+        <div class="description-section">
+          <div class="description-title">Description</div>
+          <p>{{ course?.description || course?.subtitle }}</p>
+        </div>
+      </div>
+      <div id="tab-course-content" *ngIf="selectedTab === 'content'">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+          <div style="font-size: 14px; color: #888;">
+            {{ curriculum.length }} Sections &bull; {{ getTotalLectures() }} Lectures &bull; {{ getTotalDuration() }}
+          </div>
+          <button (click)="expandAllSections()" style="font-size: 14px; color: #0097a7; font-weight: 600; background: none; border: none; cursor: pointer; text-decoration: underline;">{{ allExpanded ? 'Collapse all' : 'Expand all sections' }}</button>
+        </div>
+        <div *ngFor="let section of curriculum; let i = index" style="margin-bottom: 12px;">
+          <div (click)="toggleSection(i)" style="display: flex; align-items: center; cursor: pointer; background: #f8fafc; border-radius: 10px; padding: 14px 18px; font-weight: 700; color: #222; font-size: 16px; border: 1.5px solid #e6e6e6;">
+            <span [ngStyle]="{'transform': expandedSection === i || allExpanded ? 'rotate(90deg)' : 'rotate(0deg)', 'transition': 'transform 0.2s', 'margin-right': '16px'}">&#9654;</span>
+            <span style="flex: 1;">{{ section.title }}</span>
+            <span style="font-size: 13px; color: #888; font-weight: 600;">{{ section.lectures.length }} Lectures &bull; {{ getSectionDuration(section) }}</span>
+          </div>
+          <div *ngIf="expandedSection === i || allExpanded" style="background: #fff; border-radius: 0 0 10px 10px; border: 1.5px solid #e6e6e6; border-top: none; padding: 0 18px 12px 36px;">
+            <div *ngFor="let lecture of section.lectures" style="display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+              <span style="font-size: 18px; margin-right: 12px; color: #6bb3a3;">
+                <ng-container [ngSwitch]="lecture.type">
+                  <span *ngSwitchCase="'Video'">&#9658;</span>
+                  <span *ngSwitchCase="'Text'">&#9998;</span>
+                  <span *ngSwitchCase="'PDF'">&#128196;</span>
+                  <span *ngSwitchDefault>&#9675;</span>
+                </ng-container>
+              </span>
+              <span style="flex: 1; font-size: 15px; color: #222;">{{ lecture.title }}</span>
+              <span style="font-size: 13px; color: #888; min-width: 60px; text-align: right;">{{ lecture.durationMinutes | number:'2.0-0' }} min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tab-author-details" *ngIf="selectedTab === 'author'">
+        <h2>Author</h2>
+        <div style="font-weight: 700; color: #222; margin-bottom: 4px;">{{ course?.instructor }}</div>
+        <div style="font-size: 15px; color: #444; margin-bottom: 8px;">Best Selling Instructor, 11x AWS Certified, Kafka Guru</div>
+        <div style="font-size: 15px; color: #222; margin-bottom: 8px;">Stephane is a solutions architect, consultant and software developer with a particular interest in all things related to Cloud & Big Data. He's also a many-times best seller instructor on Udemy for his courses in AWS and Apache Kafka.</div>
+        <div style="font-size: 15px; color: #222; margin-bottom: 8px;">Stephane is recognized as an AWS Hero and is an AWS Certified Solutions Architect & AWS Certified DevOps Professional. He loves to teach people how to use the AWS properly, to get them ready for their AWS certifications, and most importantly for the real world.</div>
+        <div style="font-size: 15px; color: #222; margin-bottom: 8px;">He also loves Apache Kafka. He used on the Program Committee organizing the Kafka Summit in New York, London and San Francisco. He also was an active member of the Apache Kafka community and has authored blogs on Medium and the guest blog for Confluent. He also has co-founded Conduktor, a prominent company in the Kafka ecosystem.</div>
+        <div style="font-size: 15px; color: #222; margin-bottom: 8px;">During his spare time he enjoys cooking, practicing yoga, surfing, watching TV shows, and travelling to awesome destinations!</div>
+        <div style="font-size: 15px; color: #222; margin-bottom: 8px; font-weight: 600;">FAQ: In which order should you learn?...</div>
+        <div style="font-size: 15px; color: #222; margin-bottom: 8px;">
+          <b>AWS Cloud:</b> Start with AWS Certified Cloud Practitioner or AWS Certified Architect Associate, then move on to AWS Certified Developer Associate and then AWS Certified SysOps Administrator. Afterwards you can either do AWS Certified Solutions Architect Professional or AWS Certified DevOps Professional, depending on your certification of your choosing. You can also learn about AI with the AWS Certified AI Practitioner course!<br>
+          <b>Apache Kafka:</b> Start with Apache Kafka for Beginners, then Streams and Schema Registry if you're a developer, and Setup and Monitoring courses if you are an engineer and need to pass the Confluent Kafka certification.
+        </div>
+      </div>
+      <div id="tab-testimonials" *ngIf="selectedTab === 'testimonials'">
+        <h2>Testimonials</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 24px;">
+          <div *ngFor="let review of testimonials" style="background: #f8fafc; border-radius: 14px; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04); padding: 24px; flex: 1 1 340px; min-width: 320px; max-width: 480px; margin-bottom: 12px;">
+            <div style="font-size: 22px; font-weight: 700; color: #222; margin-bottom: 8px;">{{ review.rating }} <span style='color: #fbbf24;'>★</span></div>
+            <div style="font-size: 15px; color: #222; margin-bottom: 18px;">{{ review.comment }}</div>
+            <div style="display: flex; align-items: center; gap: 12px; margin-top: 18px;">
+              <img [src]="review.avatarUrl" alt="avatar" style="width: 44px; height: 44px; border-radius: 50%; border: 2px solid #e6f4f1;">
+              <div>
+                <div style="font-weight: 700; color: #222;">{{ review.fullName }}</div>
+                <div style="font-size: 13px; color: #888;">{{ review.track }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Related Courses Section -->
+  <div class="related-courses-section" style="margin: 48px auto 0 auto; max-width: 1200px; width: 98vw;">
+    <h2 style="font-size: 22px; font-weight: 700; color: #222; margin-bottom: 18px;">Related Courses</h2>
+    <div *ngFor="let rc of relatedCourses" style="display: flex; align-items: center; background: #fff; border-radius: 16px; border: 1.5px solid #ececec; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04); margin-bottom: 16px; padding: 18px 24px; gap: 18px;">
+      <img [src]="rc.thumbnailUrl" alt="course" style="width: 64px; height: 64px; border-radius: 12px; object-fit: cover; border: 1.5px solid #ececec;">
+      <div style="flex: 1;">
+        <div style="font-size: 15px; font-weight: 700; color: #222; margin-bottom: 2px; line-height: 1.2;">{{ rc.title }}</div>
+        <div style="font-size: 12px; color: #888; margin-bottom: 2px;">{{ rc.durationText }} <span style="margin: 0 8px;">|</span> Last updated {{ rc.lastUpdated }}</div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-end; min-width: 120px;">
+        <div style="font-size: 16px; font-weight: 700; color: #222;">{{ rc.rating }} <span style='color: #fbbf24;'>★</span></div>
+        <div style="font-size: 12px; color: #888;">({{ rc.reviewCount | number }} reviews)</div>
+        <div *ngIf="rc.badge" style="margin-top: 4px;">
+          <span [ngStyle]="{'background': rc.badge === 'Highest Rated' ? '#e0f7fa' : '#e6f4e6', 'color': rc.badge === 'Highest Rated' ? '#0097a7' : '#388e3c', 'font-weight': 600, 'font-size': '12px', 'border-radius': '6px', 'padding': '2px 10px', 'display': 'inline-block'}">{{ rc.badge }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

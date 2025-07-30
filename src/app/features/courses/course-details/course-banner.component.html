@@ -1,0 +1,93 @@
+<div class="course-banner-section">
+  <div class="banner-info-block">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <a routerLink="/dashboard">Home</a>
+      <span class="breadcrumb-sep">&gt;</span>
+      <span>{{ course?.title }}</span>
+    </nav>
+    <h1 class="course-title">{{ course?.title }}</h1>
+    <p class="course-desc">{{ course?.description || course?.subtitle }}</p>
+    <div class="course-meta-row" style="background: #e6f4f1; padding: 8px 0 8px 12px; border-radius: 6px; margin-bottom: 8px;">
+      <span>Created by:
+        <ng-container *ngIf="course?.instructor">
+          <a href="#" class="author-link">{{ course?.instructor }}</a>
+        </ng-container>
+      </span>
+    </div>
+  </div>
+  <div class="banner-art">
+    <img [src]="course?.thumbnailUrl || 'assets/images/course-default.jpg'" alt="Course Image" class="banner-image">
+    <!-- Enroll button removed as per reference image -->
+  </div>
+</div>
+<div class="metrics-bar">
+  <div class="metric">
+    <div class="metric-label">Level</div>
+    <div class="metric-value">{{ course?.level || course?.difficulty }}</div>
+  </div>
+  <div class="metric">
+    <div class="metric-label">Rating</div>
+    <div class="metric-value">
+      {{ course?.rating }} <span style="color: #fbbf24;">★</span>
+      <span class="metric-reviews">({{ course?.reviewCount | number }} reviews)</span>
+    </div>
+  </div>
+  <div class="metric">
+    <div class="metric-label">Duration</div>
+    <div class="metric-value">{{ course?.duration || course?.durationText }}</div>
+  </div>
+  <div class="metric">
+    <div class="metric-label">Flexible Schedule</div>
+    <div class="metric-value"><b>Learn at your own pace</b></div>
+  </div>
+</div>
+<div class="course-tabs">
+  <span class="tab active">Overview</span>
+  <span class="tab">Course Content</span>
+  <span class="tab">Author Details</span>
+  <span class="tab">Testimonials</span>
+</div>
+
+<div class="course-details-content" style="max-width: 800px; margin: 0 auto;">
+  <h3>What you'll Learn</h3>
+  <ul>
+    <li *ngFor="let item of course?.learningOutcomes">{{ item }}</li>
+  </ul>
+
+  <h3>Skills you'll gain</h3>
+  <div class="skills-tags">
+    <span *ngFor="let skill of course?.skills" class="tag">{{ skill }}</span>
+  </div>
+
+  <h3>Requirements</h3>
+  <ul>
+    <li *ngFor="let req of course?.requirements">{{ req }}</li>
+  </ul>
+
+  <h3>Description</h3>
+  <p>{{ course?.description }}</p>
+
+  <h4>Check out these top rated reviews</h4>
+  <blockquote *ngFor="let review of course?.topReviews">
+    “{{ review.text }}” - <strong>{{ review.author }}</strong>
+  </blockquote>
+
+  <h4>Go from Beginner to Advanced</h4>
+  <p>By the end of this Google Analytics course, you'll be using it as a powerful tool...</p>
+  <ul>
+    <li>Create a Google Analytics Account</li>
+    <li>Install Tracking Code</li>
+    <li>Load Demo Data from a Real Online Store</li>
+    <li>Add Filters to Remove Internal Traffic</li>
+    <li>Analyze Real-Time Reports</li>
+    <li>Analyze Audience Reports</li>
+    <li>Analyze Acquisition Reports</li>
+    <li>Analyze Behaviour Reports</li>
+    <li>Deep Dive into Data with Dimensions & Segments</li>
+    <li>Track Marketing Campaigns with Campaign Tagging</li>
+    <li>Add Colleagues to Google Analytics</li>
+    <li>Configure Goal Tracking</li>
+    <li>Remove Spam Traffic</li>
+  </ul>
+</div>

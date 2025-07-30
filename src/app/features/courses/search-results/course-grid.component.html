@@ -1,0 +1,18 @@
+<div class="course-grid">
+  <ng-container *ngFor="let course of courses">
+    <div class="course-card" [routerLink]="['/course', course.id]" style="cursor:pointer;">
+      <img [src]="course.thumbnailUrl || course.thumbnail" alt="{{course.title}}" class="course-thumb" />
+      <div class="course-card-content">
+        <div class="course-badge" *ngIf="course.isNew">New Launch</div>
+        <h3 class="course-title">{{course.title}}</h3>
+        <div class="course-skills">Skills you'll gain: {{course.skills}}</div>
+        <div class="course-meta">
+          <span class="rating">{{course.rating}} <span class="star">★</span></span>
+          <span class="reviews">{{course.reviews}} reviews</span>
+          <span class="level">{{course.level}}</span>
+          <span class="duration">{{course.duration}}</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

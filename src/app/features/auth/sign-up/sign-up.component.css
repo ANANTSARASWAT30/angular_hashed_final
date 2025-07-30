@@ -1,0 +1,93 @@
+.sign-up-container {
+  display: flex;
+  min-height: 100vh;
+}
+.sign-up-illustration {
+  flex: 1;
+  background: #b3c6c6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign-up-illustration img {
+  max-width: 80%;
+  height: auto;
+}
+.sign-up-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 60px;
+  background: #fff;
+}
+.product-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #46605a;
+}
+.welcome {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #46605a;
+}
+.subtitle {
+  color: #888;
+  margin-bottom: 2rem;
+}
+.form-group {
+  margin-bottom: 1.2rem;
+  width: 100%;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.password-group {
+  position: relative;
+}
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.eye-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  /* background: url('assets/icons/eye.svg') no-repeat center center; */
+  background-size: contain;
+}
+.sign-up-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: #46605a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+}
+.login-link {
+  font-size: 1rem;
+  color: #333;
+}
+.login-link a {
+  color: #3b7ddd;
+  text-decoration: none;
+  font-weight: 500;
+}

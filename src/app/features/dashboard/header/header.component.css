@@ -1,0 +1,124 @@
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.product-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #46605a;
+}
+
+.search-bar {
+  flex: 1 1 800px;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #f5f8f8;
+  border-radius: 24px;
+  border: 1px solid #e0e0e0;
+  padding: 0 32px;
+  height: 52px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.search-bar input {
+  flex: 1;
+  min-width: 400px;
+  max-width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 1.15rem;
+  outline: none;
+  padding: 0 12px;
+  height: 48px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+  margin-left: 4px;
+  outline: none;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.notification-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.user-avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Carousel scroll styling for smooth horizontal scroll and hidden scrollbar */
+.course-carousel {
+  overflow-x: auto;
+  overflow-y: visible;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+.course-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.course-carousel .course-card {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 24px;
+}
+
+.autocomplete-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  border: 1px solid #e0e0e0;
+  z-index: 10;
+  padding: 8px 0;
+  margin-top: 4px;
+}
+.autocomplete-item {
+  padding: 10px 24px;
+  font-size: 1.05rem;
+  color: #46605a;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.autocomplete-item:hover {
+  background: #f5f8f8;
+}
+.autocomplete-empty {
+  padding: 10px 24px;
+  color: #888;
+  font-size: 1rem;
+}

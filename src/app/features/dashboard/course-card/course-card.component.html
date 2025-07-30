@@ -1,0 +1,21 @@
+<a class="course-card" [routerLink]="['/course', course.id]" style="text-decoration: none; color: inherit; display: block;">
+  <div class="thumbnail">
+    <img [src]="course.thumbnailUrl || course.thumbnail" alt="Course Thumbnail" />
+    <div class="progress-overlay" *ngIf="course.progress" [ngClass]="getProgressClass(course.progress)">
+      {{ course.progress }}% Complete
+    </div>
+  </div>
+  <div class="course-info">
+    <div class="course-title">{{ course.title }}</div>
+    <div class="provider">
+      <img [src]="course.provider?.logoUrl || 'assets/images/linkedin.jpg'" alt="Provider" />
+      {{ course.provider?.name || course.provider }}
+    </div>
+    <div class="meta">
+      <span class="star">★</span> {{ course.rating }} ({{ course.reviewCount || course.reviews }} reviews) • {{ course.enrollmentCount || course.enrolled }} Enrolled
+    </div>
+    <div class="meta">
+      {{ course.difficulty || course.level }} • {{ course.durationText || course.duration }}
+    </div>
+  </div>
+</a>

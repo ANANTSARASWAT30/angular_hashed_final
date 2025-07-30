@@ -1,0 +1,4 @@
+<input type="text" placeholder="Search courses..." (input)="onInput($event)" [(ngModel)]="searchText" />
+<ul *ngIf="filteredNames.length">
+  <li *ngFor="let name of filteredNames">{{ name }}</li>
+</ul>
