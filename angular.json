@@ -29,6 +29,11 @@
                 "glob": "**/*",
                 "input": "assets",
                 "output": "assets"
+              },
+              {
+                "glob": "db.json",
+                "input": "./",
+                "output": "/"
               }
             ],
             "styles": [

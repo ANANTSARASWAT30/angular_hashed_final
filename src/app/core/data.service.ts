@@ -4,7 +4,7 @@ import { Observable, map } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class DataService {
-  private dbUrl = 'assets/db.json';
+  private dbUrl = '/db.json';
 
   constructor(private http: HttpClient) {}
 

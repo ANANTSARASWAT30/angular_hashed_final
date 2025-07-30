@@ -1,0 +1,85 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "hshimron",
+            "email": "harry.shimron@example.com",
+            "password": "hashed_password",
+            "fullName": "Harry Shimron",
+            "track": "DC Software Engineer II",
+            "avatarUrl": "https://i.pravatar.cc/150?u=hshimron",
+            "joinDate": "2021-08-14T00:00:00.000Z",
+            "role": "Admin",
+            "bio": "Passionate writer and avid traveler, Harry shares insights from his adventures around the globe. With a background in journalism, he combines storytelling with a love for photography, capturing the essence of each destination.",
+            "location": "Bangalore, India"
+        },  
+        {
+            "id": 2,
+            "username": "smaarek",
+            "email": "stephane.maarek@example.com",
+            "password": "hashed_password",
+            "fullName": "Stephane Maarek",
+            "track": "AWS Certified Cloud Practitioner",
+            "avatarUrl": "https://i.pravatar.cc/150?u=smaarek",
+            "joinDate": "2020-05-20T00:00:00.000Z",
+            "role": "Author",
+            "bio": "He is a solutions architect, consultant and software developer that has a particular interest in all things related to Cloud and Big Data. He's also a many-times best seller instructor on Udemy for his courses in AWS and Apache Kafka.",
+            "location": "New York, USA"
+        },
+        {
+            "id": 3,
+            "username": "wwarren",
+            "email": "wade.warren@example.com",
+            "password": "hashed_password",
+            "fullName": "Wade Warren",
+            "track": "Learning for U.S",
+            "avatarUrl": "https://i.pravatar.cc/150?u=wwarren",
+            "joinDate": "2022-01-10T00:00:00.000Z",
+            "role": "Learner",
+            "bio": null,
+            "location": "USA"
+        },
+        {
+            "id": 4,
+            "username": "jjones",
+            "email": "jacob.jones@example.com",
+            "password": "hashed_password",
+            "fullName": "Jacob Jones",
+            "track": "Learning for India",
+            "avatarUrl": "https://i.pravatar.cc/150?u=jjones",
+            "joinDate": "2022-03-15T00:00:00.000Z",
+            "role": "Learner",
+            "bio": null,
+            "location": "India"
+        },
+        {
+            "id": 5,
+            "username": "asinghla",
+            "email": "alisha.singhla@example.com",
+            "password": "hashed_password",
+            "fullName": "Alisha Singhla",
+            "track": null,
+            "avatarUrl": "https://i.pravatar.cc/150?u=asinghla",
+            "joinDate": "2022-06-15T00:00:00.000Z",
+            "role": "Author",
+            "bio": null,
+            "location": null
+        },
+        {
+            "id": 6,
+            "username": "ddeb",
+            "email": "dipaman.deb@example.com",
+            "password": "hashed_password",
+            "fullName": "Dipaman Deb",
+            "track": null,
+            "avatarUrl": "https://i.pravatar.cc/150?u=ddeb",
+            "joinDate": "2022-06-15T00:00:00.000Z",
+            "role": "Learner",
+            "bio": null,
+            "location": null
+        }
+    ],
+    "courses": [
+        { "id": 101, "title": "Google Data Analytics Course-1", "subtitle": "Become a Prompt Engineering Expert. Master prompt engineering patterns, techniques, and approaches to effectively leverage Generative AI", "authorId": 2, "provider": { "name": "Google", "logoUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858605536" }, "thumbnailUrl": "https://ik.imagekit.io/photodata/google.webp?updatedAt=1753858170614", "rating": 4.8, "reviewCount": 1278, "enrollmentCount": 45908, "difficulty": "Beginner", "durationText": "05 Weeks", "skills": [ "Prompt Engineering", "MS Excel", "Data Ethics", "Document Management", "Data Analysis" ], "whatYoullLearn": [ "Gain an immersive understanding of the questions and processes used by a junior or associate data analyst in their day-to-day job.", "Learn key analytical skills (data cleaning, analysis, & visualization) and tools (spreadsheets, SQL, R programming, Tableau).", "Understand how to clean and organize data for analysis, and complete analysis and calculations using spreadsheets, SQL, and R programming." ], "requirements": [ "No experience required. If you can use a web browser, you are good to go!" ], "status": "Published", "publishedDate": "2023-05-20T00:00:00.000Z" }
+    ]
+}
